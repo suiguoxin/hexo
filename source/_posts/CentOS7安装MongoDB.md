@@ -68,3 +68,8 @@ https://www.digitalocean.com/community/tutorials/how-to-install-mongodb-on-cento
 https://maninboat.gitbooks.io/n-blog/book/4.3%20%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6.html
 https://www.tutorialspoint.com/mongodb/mongodb_create_database.htm
 http://www.jianshu.com/p/65c220653afd
+
+作者 [@Guoxin][1]     
+2017 年 06月 26日    
+
+[1]: https://github.com/suiguoxin
