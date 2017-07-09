@@ -42,6 +42,7 @@ pm2 logs
 也可以配置python环境等解决，没有尝试，可以参考[CSDN博客](http://blog.csdn.net/allgis/article/details/46574493)。
 
 数据库依然放在mlab上，图床依然是七牛云。
+注意：使用公开空间，否则图片不能通过外链访问。
 
 ## 绑定域名
 

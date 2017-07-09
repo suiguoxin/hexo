@@ -32,7 +32,34 @@ gpgkey=https://www.mongodb.org/static/pgp/server-3.4.asc
 
 更新ECS上代码，重新启动程序，访问网站。
 
-bug: comme je n'ai rien fait...
+bug: 网站没有变化
+原因：package.json 文件中NODE_ENV=production在本实例中并没有生效，所以一直使用的是default的cofig
+办法：引入npm的ecosystem.config.js
+```javascript
+[mongodb-org-3.4]
+module.exports = {
+    /**
+     * Application configuration section
+     * http://pm2.keymetrics.io/docs/usage/application-declaration/
+     */
+    "apps": [{
+        name: "oceany-blog",
+        script: "app.js",
+        watch: true,
+        node_args: "--harmony",
+        merge_logs: true,
+        env: {
+            "NODE_ENV": "default"
+        },
+        env_production: {
+            "NODE_ENV": "production"
+        }
+    }]
+};
+```
+随后将npm的start命令改为`"start": "pm2 start ecosystem.config.js --env production"`
+
+现在数据库久可以正常使用了。
 
 
 ref: 
