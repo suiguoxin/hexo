@@ -35,4 +35,7 @@ More info: [Generating](https://hexo.io/docs/generating.html)
 $ hexo deploy
 ```
 
+### Cann't get /Tags/
+Solution [Zhihu](https://www.zhihu.com/question/29017171)
+
 More info: [Deployment](https://hexo.io/docs/deployment.html)
