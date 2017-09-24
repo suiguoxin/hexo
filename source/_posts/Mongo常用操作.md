@@ -2,7 +2,11 @@
 title: Mongo常用操作
 date: 2017-07-09 16:09:58
 tags: [MongoDB]
+categories: Web
 ---
+
+记录Seasim网站部署时Mongo的常用操作。
+<!-- more -->
 
 ## mongodb shell 命令
 

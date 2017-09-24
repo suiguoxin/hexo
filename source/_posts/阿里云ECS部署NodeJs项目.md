@@ -2,9 +2,11 @@
 title: 阿里云ECS部署NodeJs项目
 date: 2017-06-24 15:33:38
 tags: [ECS,NodeJs]
+categories: Web
 ---
 
 买了很久的阿里云服务器终于开始工作了，喜大普奔！
+<!-- more -->
 
 ## 购买实例
 学信网认证过期，用了黄黄的帐号
@@ -63,7 +65,7 @@ pm2 logs
 之后使用 apachectl restart 重启apache。
 此时wwww.oceany.tech就可以访问我们的网站啦。
 
-参考: 
+参考:
 https://stackoverflow.com/questions/8541182/apache-redirect-to-another-port
 https://www.centos.org/docs/5/html/Deployment_Guide-en-US/s1-apache-startstop.html
 
@@ -73,4 +75,3 @@ https://www.centos.org/docs/5/html/Deployment_Guide-en-US/s1-apache-startstop.ht
 2017 年 06月 17日    
 
 [1]: https://github.com/suiguoxin
-

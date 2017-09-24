@@ -1,7 +1,11 @@
 ---
 title: 树模型
 tags: [Tree Models,GBDT]
+categories: Machine Learning
 ---
+
+记录一下树模型的相关概念。
+<!-- more -->
 
 ## 决策树 (Decision tree):
 一种逼近离散值目标函数的方法，核心任务是把样例分类到各可能的离散值对应的类别里，因此经常被称为分类问题。 例子：根据天气情况分类星期六上午是否打网球。
@@ -61,6 +65,31 @@ tags: [Tree Models,GBDT]
 
 #### 其他问题
 
+## Ensemble Methods
+Consider a set of predictors f1, ..., fL, the idea is to construct a predictor F(x) that combines the individual decisions of f1, ..., fL.
+
+Combining Predictor:
+- Averaging
+- Weighted Averaging
+- Gating
+- Stacking : The general formulation.
+- Multi-Layer : Use neural networks as the ensemble model
+- Tree Models (Question : A predictor contains only one layer ???)
+
+Encourage to
+- involve different types of predictors
+- vary the training sets
+- vary the feature sets
+
+Cause of the Mistake | Diversification Strategy
+---- | ---
+Pattern was difficult | Try different models (????? what are pattern and models)
+over-fitting |  Vary the training sets
+Some features are noisy |  Vary the set of input features
+
+## Bagging
+
+
 ## 随机森林（Random Forest）:
 用随机的方式建立一个森林，森林里面有很多的决策树组成，随机森林的每一棵决策树之间是没有关联的。在得到森林之后，当有一个新的输入样本进入的时候，就让森林中的每一棵决策树分别进行一下判断，看看这个样本应该属于哪一类（对于分类算法），然后看看哪一类被选择最多，就预测这个样本为那一类。
 
@@ -81,9 +110,9 @@ tags: [Tree Models,GBDT]
 * 减小梯度：
 问题：如何根据当前每一个样本的梯度的情况，建立一棵决策树？
 
+
 陈天奇
 Deep Forest
-Ensemble
 
 
 参考：

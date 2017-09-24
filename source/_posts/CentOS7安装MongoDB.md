@@ -2,7 +2,11 @@
 title: CentOS7安装MongoDB
 date: 2017-06-26 23:09:48
 tags: [MongoDB,CentOS]
+categories: Web
 ---
+
+阿里云的CentOS7安装MongoDB
+<!-- more -->
 
 # MongoDB安装
 
@@ -62,7 +66,7 @@ module.exports = {
 现在数据库久可以正常使用了。
 
 
-ref: 
+ref:
 https://docs.mongodb.com/manual/tutorial/install-mongodb-on-red-hat/#configure-the-package-management-system-yum
 https://www.digitalocean.com/community/tutorials/how-to-install-mongodb-on-centos-7
 https://maninboat.gitbooks.io/n-blog/book/4.3%20%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6.html
