@@ -1,5 +1,6 @@
 ---
 title: 树模型
+date: 2017-09-24
 tags: [Tree Models,GBDT]
 categories: Machine Learning
 ---
@@ -87,14 +88,49 @@ Pattern was difficult | Try different models (????? what are pattern and models)
 over-fitting |  Vary the training sets
 Some features are noisy |  Vary the set of input features
 
-## Bagging
+## Bagging (Bootstrap Aggregating)
+Bootstrap replication:Given n training samples Z, construct a new training set Z* by sampling n instances with replacement.
+
+Steps:
+- Create bootstrap replicates of training set
+- Train a predictor for each replicate
+- Validate the predictor using out-of-bootstrap data
+- Average output of all predictors
+
+Problem: the models trained from bootstrap samples are probably positively correlated
+
+Bagging是减少variance，而boosting是减少bias。
+- Bagging是再取样 (Bootstrap) 然后在每个样本上训练出来的模型取平均，所以是降低模型的 variance. Bagging 比如 Random Forest 这种先天并行的算法都有这个效果。
+- Boosting则是迭代算法，每一次迭代都根据上一次迭代的预测结果对样本进行加权，所以随着迭代不断进行，误差会越来越小，所以模型的 bias 会不断降低。这种算法无法并行，例子比如 Adaptive Boosting.
+
 
 
 ## 随机森林（Random Forest）:
 用随机的方式建立一个森林，森林里面有很多的决策树组成，随机森林的每一棵决策树之间是没有关联的。在得到森林之后，当有一个新的输入样本进入的时候，就让森林中的每一棵决策树分别进行一下判断，看看这个样本应该属于哪一类（对于分类算法），然后看看哪一类被选择最多，就预测这个样本为那一类。
 
+Random forest is a substantial modification of bagging that builds a large collection of de-correlated trees, and then average them.
+
 * 行采样：为每棵树选择样本
 * 列采样：为每棵树选择features
+
+To make a prediction at a new point x:
+* Regression: prediction average
+* Classification: majority voting
+
+ Bagging vs. Random Forest vs. Boosting
+* Bagging (bootstrap aggregating) simply treats each predictor trained on a bootstrap set with the same weight
+* Random forest tries to de-correlate the bootstrap- trained predictors (decision trees) by sampling features
+* Boosting strategically learns and combines the next predictor based on previous predictors
+
+## AdaBoost
+
+### Additive Models
+加性模型中是利用一个平滑函数将Yi和Xi连接起来， nonparametric method.
+* Additive Regression Models
+* Additive Classification Models
+
+### 过程
+参考(https://zhuanlan.zhihu.com/p/27126737)
 
 ## GBDT
 ### 原始的Boost算法：
@@ -110,12 +146,19 @@ Some features are noisy |  Vary the set of input features
 * 减小梯度：
 问题：如何根据当前每一个样本的梯度的情况，建立一棵决策树？
 
+### XGBoost : The most effective and efficient toolkit for GBDT
 
-陈天奇
-Deep Forest
+## 扩展
+可以通过查看路径来获得对决策树和随机森林的更加深入的理解。通过决策树计算路径中每一次分支时一个feature的contribution，可以得到当前页节点每一个节点的contribution。通过将许多决策树组成森林并为一个变量取所有树的平均贡献，这个确定特征的贡献的过程可以自然地扩展成随机森林。
+参考:[机器之心：如何解读决策树和随机森林的内部工作机制？](http://mp.weixin.qq.com/s/DTDH2m21Gz1UQ2tW64kPZg)
 
+To learn:
+- Tianqi Chen 52cs
+- Deep Forest
+- DNN
 
 参考：
 - "Machine Learning" Tom M.Mitchell 曾华军 张银奎 等译
 - [SJTU CS420: Machine Learning](http://wnzhang.net/teaching/cs420/index.html)
 - [机器学习中的算法(1)-决策树模型组合之随机森林与GBDT](http://www.cnblogs.com/LeftNotEasy/archive/2011/03/07/random-forest-and-gbdt.html)
+- [XGBoost 与 Boosted Tree](http://www.52cs.org/?p=429)
