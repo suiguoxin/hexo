@@ -1,11 +1,11 @@
 ---
 title: 阿里云ECS部署NodeJs项目
-date: 2017-06-24 15:33:38
+date: 2017-06-24
 tags: [ECS,NodeJs]
 categories: Web
 ---
 
-买了很久的阿里云服务器终于开始工作了，喜大普奔！
+买了很久的阿里云服务器终于开始工作了。
 <!-- more -->
 
 ## 购买实例
@@ -72,6 +72,5 @@ https://www.centos.org/docs/5/html/Deployment_Guide-en-US/s1-apache-startstop.ht
 ---
 
 作者 [@Guoxin][1]     
-2017 年 06月 17日    
 
 [1]: https://github.com/suiguoxin

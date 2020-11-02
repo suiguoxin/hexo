@@ -1,6 +1,6 @@
 ---
 title: CentOS7安装MongoDB
-date: 2017-06-26 23:09:48
+date: 2017-06-26
 tags: [MongoDB,CentOS]
 categories: Web
 ---
@@ -74,6 +74,5 @@ https://www.tutorialspoint.com/mongodb/mongodb_create_database.htm
 http://www.jianshu.com/p/65c220653afd
 
 作者 [@Guoxin][1]     
-2017 年 06月 26日    
 
 [1]: https://github.com/suiguoxin

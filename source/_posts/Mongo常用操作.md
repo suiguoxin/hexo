@@ -1,6 +1,6 @@
 ---
 title: Mongo常用操作
-date: 2017-07-09 16:09:58
+date: 2017-07-09
 tags: [MongoDB]
 categories: Web
 ---
@@ -68,6 +68,5 @@ db.users.remove(
 ---
 
 作者 [@Guoxin][1]     
-2017 年 07月 09日    
 
 [1]: https://github.com/suiguoxin
